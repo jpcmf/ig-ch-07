@@ -51,8 +51,8 @@ export default function Home(): JSX.Element {
       return imageData.data.flat();
     });
 
-    console.log(data?.pages);
-    console.log(formatted);
+    // console.log(data?.pages);
+    // console.log(formatted);
 
     return formatted;
   }, [data]);
@@ -63,7 +63,7 @@ export default function Home(): JSX.Element {
   }
 
   // TODO RENDER ERROR SCREEN
-  if (isLoading && isError) {
+  if (!isLoading && isError) {
     return <Error />;
   }
 
